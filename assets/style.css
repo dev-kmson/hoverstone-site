@@ -35,6 +35,8 @@
 
 html { -webkit-text-size-adjust: 100%; }
 
+img { max-width: 100%; height: auto; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -164,4 +166,10 @@ footer a { color: var(--muted); }
   box-shadow: 0 24px 60px -28px rgba(20, 30, 60, 0.45);
 }
 .shot figcaption { text-align: center; color: var(--muted); font-size: 15px; margin-top: 14px; }
-.shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px 24px; margin-top: 48px; }
+.shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px 24px; margin-top: 48px; align-items: start; }
+/* Two close-ups of the panel shown as one shot */
+.pair { display: flex; gap: 12px; justify-content: center; }
+.pair img { width: calc(50% - 6px); }
+@media (min-width: 700px) {
+  .shot-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12px); }
+}
