@@ -154,3 +154,14 @@ footer a { color: var(--muted); }
   .top nav { gap: 14px; }
   .pro { padding: 28px 20px; }
 }
+
+/* Screenshots: one wide under the hero, the rest two by two */
+.shots { padding-top: 0; }
+.shot { margin: 0; }
+.shot img {
+  display: block; width: 100%; height: auto; border-radius: 14px;
+  border: 1px solid var(--line); background: var(--surface);
+  box-shadow: 0 24px 60px -28px rgba(20, 30, 60, 0.45);
+}
+.shot figcaption { text-align: center; color: var(--muted); font-size: 15px; margin-top: 14px; }
+.shot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px 24px; margin-top: 48px; }
