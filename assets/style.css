@@ -149,6 +149,7 @@ footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 28px 0 40
 footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
 footer nav { display: flex; flex-wrap: wrap; gap: 20px; }
 footer a { color: var(--muted); }
+footer a[aria-current] { color: var(--text); font-weight: 600; }
 
 @media (max-width: 600px) {
   .hero { padding-top: 48px; padding-bottom: 40px; }
@@ -172,4 +173,11 @@ footer a { color: var(--muted); }
 .pair img { width: calc(50% - 6px); }
 @media (min-width: 700px) {
   .shot-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 12px); }
+}
+
+/* A path to type into Finder: monospaced, and broken anywhere it must */
+.path {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13.5px;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 12px; margin-top: 10px !important; word-break: break-all; user-select: all;
 }
